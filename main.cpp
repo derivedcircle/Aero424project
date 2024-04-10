@@ -2,6 +2,8 @@
 #include <string>
 //all standard libraries used
 #include "plane.h"
+#include "initializer.h"
+#include "instructions.h"
 // all header files to include
 
 using namespace std;
@@ -10,6 +12,8 @@ using namespace std;
 
 int main()
 {
-
+	string name;
+	name = initFun();
+	cout << name << endl;
 	return 0;
 }

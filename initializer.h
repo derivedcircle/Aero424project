@@ -1,10 +1,11 @@
 #ifndef INIT_H
 #define INIT_H
 // include guard
+#include<string>
 
 using namespace std;
 
 
-vector<char> initFun();
+string initFun();
 
 #endif // !INIT_H
