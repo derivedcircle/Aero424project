@@ -15,5 +15,6 @@ int main()
 	string name;
 	name = initFun();
 	cout << name << endl;
+	// here is another thingy
 	return 0;
 }
