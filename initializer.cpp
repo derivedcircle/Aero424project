@@ -11,7 +11,7 @@ using namespace std;
 string initFun()
 {
 	// brief greeting/introduction (feel free to change name to whatever)
-	cout << "Hello and welcome to Aircraft Maintanance Tycoon" << endl;
+	cout << "Hello! Welcome to Aircraft Maintanance Tycoon" << endl;
 	cout << "To win, you need to survive the longest without having a crash" << endl << endl;
 	
 	// logic code for deciding which instruction set the user should be served
