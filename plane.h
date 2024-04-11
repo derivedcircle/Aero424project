@@ -1,15 +1,16 @@
 #include <iostream>
-#ifndef plane_H
-#define plane_H
+#ifndef Plane_H
+#define Plane_H
 //include guards
 
-class plane
+class Plane
 {
-	virtual void getIssue() = 0;
-	virtual void possibleSolutions() = 0;
-	virtual void getSize() = 0;
-	virtual void costImplentation() = 0;
-	virtual ~plane();
+public:
+	virtual void getIssue(int num) = 0;
+	virtual void possibleSolutions(int number) = 0;
+	virtual float getCost() = 0;
+	virtual int getTime() = 0;
+	virtual ~Plane();
 };
 
-#endif // !plane_H
+#endif // !Plane_H
