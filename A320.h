@@ -27,8 +27,10 @@ public:
 	//user must decide on the best course of action to fix the problem above
 	void possibleSolutions(int number) override;
 
+	//get cost of repairs
 	float getCost() override;
 
+	//get time to repair plane
 	int getTime() override;
 };
 

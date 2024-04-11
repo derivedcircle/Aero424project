@@ -51,8 +51,8 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 		}
 		break;
 	case 1:
-		//Door flew off during flight
-		std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to replace the door and paint over any problematic bolts ($100). Press C to replace the door as well as problematic bolts in other areas of the plane ($200)" << endl;
+		//Instrument not working
+		std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to tell passengers to turn on airplane mood ($0). Press C to replace all of the instruments ($300)" << endl;
 		std::cin >> options;
 		switch (options) {
 		case 'A':
@@ -61,13 +61,13 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 			issueFixed = false;
 			break;
 		case 'B':
-			time = 2;
-			cost = 100;
-			issueFixed = false;
+			time = 0;
+			cost = 0;
+			issueFixed = true;
 			break;
 		case 'C':
-			time = 4;
-			cost = 200;
+			time = 7;
+			cost = 300;
 			issueFixed = true;
 			break;
 		}
