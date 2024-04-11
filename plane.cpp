@@ -2,8 +2,8 @@
 
 class plane
 {
-	virtual void getIssue();
-	virtual void possibleSolutions();
+	virtual void getIssue() = 0;
+	virtual void possibleSolutions() = 0;
 	virtual void getSize();
 	virtual void costImplentation();
 	virtual ~plane();
