@@ -1,4 +1,6 @@
 #include "userinterface.h"
+#include <array>
+#include <thread>
 
 using namespace std;
 
@@ -29,4 +31,10 @@ ostream& operator<<(ostream& os, const UserInterface& obj)
 void UserInterface::hangarOperation()
 {
 	days++;// impliment later
+}
+
+void UserInterface::newAircraftArrivals()
+{
+	array<array<int, 2>, 3> aircraftGenerationMatrix;
+
 }
