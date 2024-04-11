@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 //all standard libraries used
 #include "plane.h"
 #include "initializer.h"
@@ -12,9 +13,10 @@ using namespace std;
 
 int main()
 {
-	string name;
-	name = initFun();
-	cout << name << endl;
-	// here is another thingy
+	// holds the username that will be called throughout the program
+	string username;
+	username = initFun();
+	cout << username << endl;
+	
 	return 0;
 }
