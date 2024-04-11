@@ -34,6 +34,15 @@ ostream& operator<<(ostream& os, const UserInterface& obj)
 void UserInterface::hangarOperation()
 {
 	days++;// impliment later
+	for (auto it = planesInHangar.begin(); it != planesInHangar.end(); it++)
+	{
+		it->second--;
+		if (it->second == 0)
+		{
+			//what happens when the plane completes it maintanance (it leaves and check if it will crash after
+		}
+
+	}
 }
 
 void UserInterface::newAircraftArrivals()
