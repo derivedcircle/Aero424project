@@ -5,6 +5,7 @@
 #include "plane.h"
 #include "initializer.h"
 #include "instructions.h"
+#include "userinterface.h"
 // all header files to include
 
 using namespace std;
@@ -13,10 +14,10 @@ using namespace std;
 
 int main()
 {
-	// holds the username that will be called throughout the program
-	string username;
-	username = initFun();
-	cout << username << endl;
+	UserInterface user1(initFun());
+	cout << user1 << endl;
+	user1.hangarOperation();
+	cout << user1 << endl;
 	
 	return 0;
 }
