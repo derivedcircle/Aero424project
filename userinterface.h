@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include "plane.h"
 
 using namespace std;
 
@@ -15,7 +16,8 @@ class UserInterface
 	double hangarSpace;
 	float moneySpent;
 	int days;
-	// a map with the planes in the hanger and how many days it will take to do their maintanance
+	// a map with the planes in the hanger and how many days are remaining to do their maintanance
+	map<Plane*, int> planesInHangar;
 	
 public:
 

@@ -18,6 +18,7 @@ int main()
 	cout << user1 << endl;
 	user1.hangarOperation();
 	cout << user1 << endl;
+	user1.newAircraftArrivals();
 	
 	return 0;
 }
