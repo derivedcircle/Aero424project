@@ -18,8 +18,6 @@ private:
 
 public:
 	bool issueFixed;
-	int time;
-	int cost;
 
 	//user chooses number and based off of that, a problem is generated
 	void getIssue(int num) override;
