@@ -28,6 +28,7 @@
 	void A220IssueandSolutions::possibleSolutions(int number) {
 		char options;
 		switch (number) {
+		//Issue: Plane flew into drone show
 		case 0:
 			std::cout << "How do you want to solve this issue? Press A to install a drone shield ($1000). Press B to inspect the plane for damages ($100). Press C to do nothing ($0)." << endl;
 			std::cin >> options;
@@ -50,6 +51,7 @@
 			}
 			break;
 		case 1:
+			//Door flew off during flight
 			std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to replace the door and paint over any problematic bolts ($100). Press C to replace the door as well as problematic bolts in other areas of the plane ($200)" << endl;
 			std::cin >> options;
 			switch (options) {
@@ -81,10 +83,12 @@
 		}
 	}
 
+	//find cost of repairs
 	float A220IssueandSolutions::getCost() {
 		return cost;
 	}
 
+	//get time spent on repairs
 	int A220IssueandSolutions::getTime() {
 		return time;
 	}

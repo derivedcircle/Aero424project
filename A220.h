@@ -32,4 +32,4 @@ public:
 	int getTime() override;
 };
 
-#endif // !INIT_H
+#endif // !A220_H
