@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void instructions(const std::string& filename) // makes a function that takes in instructions file
+void instructions(const std::string& filename) // makes a function that takes in instructions file :)
 {
 	ifstream inFile(filename, ios::in); //opens the file that is declared to be filename 
 
