@@ -1,0 +1,98 @@
+#include <iostream>
+#include <vector>
+#include "initializer.h"
+#include "instructions.h"
+#include "plane.h"
+#include "userinterface.h"
+#include "B767.h"
+
+
+//problems the B767 plane can have
+//user chooses number and based off of that, a problem is generated
+void B767IssueandSolutions::getIssue(int num) {
+	while (num != 1 || num != 0)
+	{
+		std::cout << "Please enter either a 1 or 0" << endl;
+		std::cin >> num;
+	}
+	switch (num) {
+	case 0:
+		std::cout << "Just discovered a trap door" << endl;
+		break;
+	case 1:
+		std::cout << "One of the windows cracked" << endl;
+		break;
+	}
+}
+
+//user must decide on the best course of action to fix the problem above
+void B767IssueandSolutions::possibleSolutions(int number) {
+	char options;
+	while (number != 1 || number != 0)
+	{
+		std::cout << "Please enter either a 1 or 0" << endl;
+		std::cin >> number;
+	}
+	switch (number) {
+	//Issue: Trap door
+	case 0:
+		std::cout << "How do you want to solve this issue? Press A to do nothing ($0). Give the passengers a parachute and wish them luck ($100).Press C to inspect and replace ($1000)" << endl;
+		std::cin >> options;
+		while (options != 'A' || options != 'B' || options != 'C') {
+			std::cout << "Please enter either A, B, or C" << endl;
+		}
+		switch (options) {
+		case 'A':
+			time = 0;
+			cost = 0;
+			planeSafe = false;
+			break;
+		case 'B':
+			time = 0;
+			cost = 100;
+			planeSafe = false;
+			break;
+		case 'C':
+			time = 30;
+			cost = 1000;
+			planeSafe = true;
+			break;
+		}
+		break;
+	case 1:
+		//Window crack
+		std::cout << "How do you want to solve the issue? Press A to duct tape the window ($5). Press B to do nothing ($0). Press C to replace the window ($100)" << endl;
+		std::cin >> options;
+		while (options != 'A' || options != 'B' || options != 'C') {
+			std::cout << "Please enter either A, B, or C" << endl;
+		}
+		switch (options) {
+		case 'A':
+			time = 0;
+			cost = 5;
+			planeSafe = false;
+			break;
+		case 'B':
+			time = 0;
+			cost = 0;
+			planeSafe = false;
+			break;
+		case 'C':
+			time = 3;
+			cost = 100;
+			planeSafe = true;
+			break;
+		}
+		break;
+	}
+}
+
+//find cost of repairs
+float B767IssueandSolutions::getCost() {
+	return cost;
+}
+
+//get time spent on repairs
+int B767IssueandSolutions::getTime() {
+	return time;
+}

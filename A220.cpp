@@ -45,17 +45,17 @@ void A220IssueandSolutions::possibleSolutions(int number) {
 		case 'A':
 			time = 30;
 			cost = 1000;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		case 'B':
 			time = 7;
 			cost = 100;
-			issueFixed = true;
+			planeSafe = true;
 			break;
 		case 'C':
 			time = 0;
 			cost = 0;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		}
 		break;
@@ -70,17 +70,17 @@ void A220IssueandSolutions::possibleSolutions(int number) {
 		case 'A':
 			time = 0;
 			cost = 0;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		case 'B':
 			time = 2;
 			cost = 100;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		case 'C':
 			time = 4;
 			cost = 200;
-			issueFixed = true;
+			planeSafe = true;
 			break;
 		}
 		break;

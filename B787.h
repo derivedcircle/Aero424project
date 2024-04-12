@@ -17,7 +17,7 @@ private:
 	int cost;
 
 public:
-	bool issueFixed;
+	bool planeSafe;
 
 	//user chooses number and based off of that, a problem is generated
 	void getIssue(int num) override;

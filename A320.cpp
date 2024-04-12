@@ -45,17 +45,17 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 		case 'A':
 			time = 7;
 			cost = 500;
-			issueFixed = true;
+			planeSafe = true;
 			break;
 		case 'B':
 			time = 3;
 			cost = 50;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		case 'C':
 			time = 0;
 			cost = 0;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		}
 		break;
@@ -70,17 +70,17 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 		case 'A':
 			time = 0;
 			cost = 0;
-			issueFixed = false;
+			planeSafe = false;
 			break;
 		case 'B':
 			time = 0;
 			cost = 0;
-			issueFixed = true;
+			planeSafe = true;
 			break;
 		case 'C':
 			time = 7;
 			cost = 300;
-			issueFixed = true;
+			planeSafe = true;
 			break;
 		}
 		break;
