@@ -10,6 +10,11 @@
 //problems the A350 plane can have
 //user chooses number and based off of that, a problem is generated
 void A350IssueandSolutions::getIssue(int num) {
+	while (num != 1 || num != 0)
+	{
+		std::cout << "Please enter either a 1 or 0" << endl;
+		std::cin >> num;
+	}
 	switch (num) {
 	case 0:
 		std::cout << "The tire fell off during flight" << endl;
@@ -18,20 +23,24 @@ void A350IssueandSolutions::getIssue(int num) {
 		std::cout << "There is no fuel" << endl;
 		break;
 	}
-	while (num != 1 || num != 0)
-	{
-		std::cout << "Please enter either a 1 or 0";
-	}
 }
 
 //user must decide on the best course of action to fix the problem above
 void A350IssueandSolutions::possibleSolutions(int number) {
 	char options;
+	while (number != 1 || number != 0)
+	{
+		std::cout << "Please enter either a 1 or 0" << endl;
+		std::cin >> number;
+	}
 	switch (number) {
-		//Issue: Engine filled with diesel
+	//Issue: Engine filled with diesel
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to replace the wheel and bolts ($500). Press B to do nothing ($0). Press C to replace the door ($400)" << endl;
 		std::cin >> options;
+		while (options != 'A' || options != 'B' || options != 'C') {
+			std::cout << "Please enter either A, B, or C" << endl;
+		}
 		switch (options) {
 		case 'A':
 			time = 7;
@@ -54,6 +63,9 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 		//No fuel
 		std::cout << "How do you want to solve the issue? Press A to refuel ($50). Press B to do nothing ($0). Press C to replace the whole engine ($500)" << endl;
 		std::cin >> options;
+		while (options != 'A' || options != 'B' || options != 'C') {
+			std::cout << "Please enter either A, B, or C" << endl;
+		}
 		switch (options) {
 		case 'A':
 			time = 0;
@@ -71,15 +83,7 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 			issueFixed = true;
 			break;
 		}
-		while (options != 'A' || options != 'B' || options != 'C')
-		{
-			cout << "Please choose A,B, or C depending on which option you think is best.";
-		}
 		break;
-	}
-	while (number != 1 || number != 0)
-	{
-		std::cout << "Please enter either a 1 or 0";
 	}
 }
 

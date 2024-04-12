@@ -10,6 +10,11 @@
 //problems the A320 plane can have
 //user chooses number and based off of that, a problem is generated
 void A320IssueandSolutions::getIssue(int num) {
+	while (num != 1 || num != 0)
+	{
+		std::cout << "Please enter either a 1 or 0" << endl;
+		std::cin >> num;
+	}
 	switch (num) {
 	case 0:
 		std::cout << "A pigeon flew into one of the engines" << endl;
@@ -18,20 +23,24 @@ void A320IssueandSolutions::getIssue(int num) {
 		std::cout << "One of the instruments isn't working" << endl;
 		break;
 	}
-	while (num != 1 || num != 0)
-	{
-		std::cout << "Please enter either a 1 or 0";
-	}
 }
 
 //user must decide on the best course of action to fix the problem above
 void A320IssueandSolutions::possibleSolutions(int number) {
 	char options;
+	while (number != 1 || number != 0)
+	{
+		std::cout << "Please enter either a 1 or 0" << endl;
+		std::cin >> number;
+	}
 	switch (number) {
 	//Issue: Pigeons flew into engine
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to replace the engine ($500). Press B to implement a pigeon shield ($100). Press C to do nothing ($0)." << endl;
 		std::cin >> options;
+		while (options != 'A' || options != 'B' || options != 'C') {
+			std::cout << "Please enter either A, B, or C" << endl;
+		}
 		switch (options) {
 		case 'A':
 			time = 7;
@@ -54,6 +63,9 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 		//Instrument not working
 		std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to tell passengers to turn on airplane mood ($0). Press C to replace all of the instruments ($300)" << endl;
 		std::cin >> options;
+		while (options != 'A' || options != 'B' || options != 'C') {
+			std::cout << "Please enter either A, B, or C" << endl;
+		}
 		switch (options) {
 		case 'A':
 			time = 0;
@@ -71,15 +83,7 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 			issueFixed = true;
 			break;
 		}
-		while (options != 'A' || options != 'B' || options != 'C')
-		{
-			cout << "Please choose A,B, or C depending on which option you think is best.";
-		}
 		break;
-	}
-	while (number != 1 || number != 0)
-	{
-		std::cout << "Please enter either a 1 or 0";
 	}
 }
 
