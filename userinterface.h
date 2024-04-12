@@ -27,7 +27,7 @@ public:
 
 	bool hasPlaneCrashed;
 
-	static vector<string> userHistory; // a vector holding all of the former users who have played the game
+	//static vector<string> userHistory; // a vector holding all of the former users who have played the game
 
 	UserInterface( string name);// UI constructor
 	

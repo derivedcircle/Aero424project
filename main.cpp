@@ -36,10 +36,10 @@ int main()
 			cout << "You have just acheved the high score! Congradulations!" << endl;
 		}
 		cout << "Here are the names of those who have played before you" << endl;
-		for (auto& names : UserInterface::userHistory)
+		/*for (auto& names : UserInterface::userHistory)
 		{
 			cout << names << endl;
-		}
+		}*/
 		string playGameAgainCheck;
 		
 		// the regex checks for yes/no or y/n with any capitalization

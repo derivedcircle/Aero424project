@@ -23,7 +23,7 @@ UserInterface::UserInterface(string name)
 	moneySpent = 0.0;
 	days = 0;
 	hasPlaneCrashed = false;
-	userHistory.push_back(name); // adds username to the history of all users who have played the game
+	//userHistory.push_back(name); // adds username to the history of all users who have played the game
 }
 
 // returns the current status for the user
