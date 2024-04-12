@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//include guard
 #include "initializer.h"
 #include "instructions.h"
 #include "plane.h"
@@ -10,7 +11,8 @@
 //problems the A330 plane can have
 //user chooses number and based off of that, a problem is generated
 void A330IssueandSolutions::getIssue(int num) {
-	while (num != 1 || num != 0)
+	//while loops to make sure user uses valid number/letter
+	while (num != 1 && num != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> num;
@@ -28,7 +30,7 @@ void A330IssueandSolutions::getIssue(int num) {
 //user must decide on the best course of action to fix the problem above
 void A330IssueandSolutions::possibleSolutions(int number) {
 	char options;
-	while (number != 1 || number != 0)
+	while (number != 1 && number != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> number;
@@ -38,7 +40,7 @@ void A330IssueandSolutions::possibleSolutions(int number) {
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to replace the engine ($500). Press B to do nothing ($0). Press C to flush out the diesel and refuel with the right fuel ($100)." << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
@@ -53,22 +55,22 @@ void A330IssueandSolutions::possibleSolutions(int number) {
 			planeSafe = false;
 			break;
 		case 'C':
-			time = 0;
+			time = 1;
 			cost = 20;
 			planeSafe = true;
 			break;
 		}
 		break;
 	case 1:
-		//No fuel
+		//Issue: No fuel
 		std::cout << "How do you want to solve the issue? Press A to refuel ($50). Press B to do nothing ($0). Press C to replace the whole engine ($500)" << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
 		case 'A':
-			time = 0;
+			time = 1;
 			cost = 50;
 			planeSafe = true;
 			break;
@@ -100,4 +102,8 @@ int A330IssueandSolutions::getTime() {
 //get status of plane safety
 bool A330IssueandSolutions::getPlaneSafe() {
 	return planeSafe;
+}
+
+double A330IssueandSolutions::getSize() {
+	return 600.0;
 }

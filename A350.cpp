@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//include guard
 #include "initializer.h"
 #include "instructions.h"
 #include "plane.h"
@@ -10,7 +11,8 @@
 //problems the A350 plane can have
 //user chooses number and based off of that, a problem is generated
 void A350IssueandSolutions::getIssue(int num) {
-	while (num != 1 || num != 0)
+	//while loops to make sure user uses valid number/letter
+	while (num != 1 && num != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> num;
@@ -28,7 +30,7 @@ void A350IssueandSolutions::getIssue(int num) {
 //user must decide on the best course of action to fix the problem above
 void A350IssueandSolutions::possibleSolutions(int number) {
 	char options;
-	while (number != 1 || number != 0)
+	while (number != 1 && number != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> number;
@@ -38,7 +40,7 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to replace the wheel and bolts ($500). Press B to do nothing ($0). Press C to replace the door ($400)" << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
@@ -60,15 +62,15 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 		}
 		break;
 	case 1:
-		//No fuel
+		//Issue: No fuel
 		std::cout << "How do you want to solve the issue? Press A to refuel ($50). Press B to do nothing ($0). Press C to replace the whole engine ($500)" << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
 		case 'A':
-			time = 0;
+			time = 1;
 			cost = 50;
 			planeSafe = true;
 			break;
@@ -100,4 +102,8 @@ int A350IssueandSolutions::getTime() {
 //get status of plane safety
 bool A350IssueandSolutions::getPlaneSafe() {
 	return planeSafe;
+}
+
+double A350IssueandSolutions::getSize() {
+	return 800.0;
 }

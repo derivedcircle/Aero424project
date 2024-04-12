@@ -10,6 +10,7 @@ public:
 	virtual void possibleSolutions(int number) = 0;
 	virtual float getCost() = 0;
 	virtual int getTime() = 0;
+	virtual double getSize() = 0;
 	virtual bool getPlaneSafe() = 0;
 };
 

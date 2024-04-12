@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//include guard
 #include "initializer.h"
 #include "instructions.h"
 #include "plane.h"
@@ -10,7 +11,8 @@
 //problems the A220 plane can have
 //user chooses number and based off of that, a problem is generated
 void A220IssueandSolutions::getIssue(int num) {
-	while (num != 1 || num != 0)
+	//while loops to make sure user uses valid number/letter
+	while (num != 1 && num != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> num;
@@ -28,7 +30,7 @@ void A220IssueandSolutions::getIssue(int num) {
 //user must decide on the best course of action to fix the problem above
 void A220IssueandSolutions::possibleSolutions(int number) {
 	char options;
-	while (number != 1 || number != 0)
+	while (number != 1 && number != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> number;
@@ -38,7 +40,7 @@ void A220IssueandSolutions::possibleSolutions(int number) {
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to install a drone shield ($1000). Press B to inspect the plane for damages ($100). Press C to do nothing ($0)." << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
@@ -60,10 +62,10 @@ void A220IssueandSolutions::possibleSolutions(int number) {
 		}
 		break;
 	case 1:
-		//Door flew off during flight
+		//Issue: Door flew off during flight
 		std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to replace the door and paint over any problematic bolts ($100). Press C to replace the door as well as problematic bolts in other areas of the plane ($200)" << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
@@ -100,4 +102,8 @@ int A220IssueandSolutions::getTime() {
 //get status of plane safety
 bool A220IssueandSolutions::getPlaneSafe() {
 	return planeSafe;
+}
+
+double A220IssueandSolutions::getSize() {
+	return 300.0;
 }

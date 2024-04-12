@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//include guard
 #include "initializer.h"
 #include "instructions.h"
 #include "plane.h"
@@ -10,7 +11,8 @@
 //problems the B777 plane can have
 //user chooses number and based off of that, a problem is generated
 void B777IssueandSolutions::getIssue(int num) {
-	while (num != 1 || num != 0)
+	//while loops to make sure user uses valid number/letter
+	while (num != 1 && num != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> num;
@@ -28,7 +30,7 @@ void B777IssueandSolutions::getIssue(int num) {
 //user must decide on the best course of action to fix the problem above
 void B777IssueandSolutions::possibleSolutions(int number) {
 	char options;
-	while (number != 1 || number != 0)
+	while (number != 1 && number != 0)
 	{
 		std::cout << "Please enter either a 1 or 0" << endl;
 		std::cin >> number;
@@ -38,7 +40,7 @@ void B777IssueandSolutions::possibleSolutions(int number) {
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to tell the pilots to get prescription glasses ($0). Clean the window ($30).Press C to replace the window ($300)" << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
@@ -48,7 +50,7 @@ void B777IssueandSolutions::possibleSolutions(int number) {
 			planeSafe = false;
 			break;
 		case 'B':
-			time = 0;
+			time = 1;
 			cost = 30;
 			planeSafe = true;
 			break;
@@ -60,10 +62,10 @@ void B777IssueandSolutions::possibleSolutions(int number) {
 		}
 		break;
 	case 1:
-		//Septic tank leak
+		//Issue: Septic tank leak
 		std::cout << "How do you want to solve the issue? Press A to wish the passengers good luck ($0). Press B to replace the fuel tank ($400). Press C to replace the septic tank ($200)" << endl;
 		std::cin >> options;
-		while (options != 'A' || options != 'B' || options != 'C') {
+		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
@@ -100,4 +102,8 @@ int B777IssueandSolutions::getTime() {
 //get status of plane safety
 bool B777IssueandSolutions::getPlaneSafe() {
 	return planeSafe;
+}
+
+double B777IssueandSolutions::getSize() {
+	return 700.0;
 }

@@ -33,6 +33,9 @@ public:
 
 	//get status of plane safety
 	bool getPlaneSafe() override;
+
+	// get hangar space
+	double getSize() override;
 };
 
 #endif // !B787_H
