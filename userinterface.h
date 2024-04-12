@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <vector>
 #include "plane.h"
 
 using namespace std;
@@ -18,10 +19,14 @@ class UserInterface
 	int days;
 	// a map with the planes in the hanger and how many days are remaining to do their maintanance
 	map<Plane*, int> planesInHangar;
+
+	
 	
 public:
 
 	bool hasPlaneCrashed;
+
+	static vector<string> userHistory; // a vector holding all of the former users who have played the game
 
 	UserInterface( string name);// UI constructor
 	

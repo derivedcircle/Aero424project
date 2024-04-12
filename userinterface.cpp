@@ -1,6 +1,7 @@
 #include "userinterface.h"
 #include <array>
 #include <thread>
+#include <vector>
 #include "randomnumbergenerators.h"
 #include "plane.h"
 #include "A220.h"
@@ -22,7 +23,7 @@ UserInterface::UserInterface(string name)
 	moneySpent = 0.0;
 	days = 0;
 	hasPlaneCrashed = false;
-
+	userHistory.push_back(name); // adds username to the history of all users who have played the game
 }
 
 // returns the current status for the user
@@ -90,6 +91,7 @@ void UserInterface::newAircraftArrivals()
 	// we are getting the issues, allowing the user to select the solution and then noting down how much money the user spends and putting the plane into our hangar
 	newArrivePlane1->getIssue(aircraftGenerationMatrix[0][1]);
 	newArrivePlane1->possibleSolutions(aircraftGenerationMatrix[0][1]);
+	
 	moneySpent += newArrivePlane1->getCost();
 	planesInHangar[newArrivePlane1] = newArrivePlane1->getTime();
 	// something to handle hangar space taken up and logic if there is no hangar space remaining

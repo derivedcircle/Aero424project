@@ -12,6 +12,8 @@
 using namespace std;
 // setting default namespace as standard for convenience
 
+// high score global varible to keep track of the highest score earned in game
+int HIGH_SCORE_GV = 0;
 
 int main()
 {
