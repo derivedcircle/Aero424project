@@ -30,7 +30,9 @@ public:
 	
 	void newAircraftArrivals();// function that creates new aircraft to pick from 
 
-	void hangarOperation(); // function that goes through and decrements all aircraft maintanance times 
+	void hangarOperation(); // function that goes through and decrements all aircraft maintanance times
+
+	Plane* createPlane(int planeid); // function that returns a plane pointer depending on the plane requested
 };
 
 #endif // !UI_H

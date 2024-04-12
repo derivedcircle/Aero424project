@@ -28,7 +28,7 @@ void A330IssueandSolutions::getIssue(int num) {
 void A330IssueandSolutions::possibleSolutions(int number) {
 	char options;
 	switch (number) {
-		//Issue: Engine filled with diesel
+	//Issue: Engine filled with diesel
 	case 0:
 		std::cout << "How do you want to solve this issue? Press A to replace the engine ($500). Press B to do nothing ($0). Press C to flush out the diesel and refuel with the right fuel ($100)." << endl;
 		std::cin >> options;
