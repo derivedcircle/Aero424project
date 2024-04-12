@@ -2,6 +2,15 @@
 #include <array>
 #include <thread>
 #include "randomnumbergenerators.h"
+#include "plane.h"
+#include "A220.h"
+#include "A320.h"
+#include "A330.h"
+#include "A350.h"
+#include "B737.h"
+#include "B767.h"
+#include "B777.h"
+#include "B787.h"
 using namespace std;
 
 
@@ -37,9 +46,10 @@ void UserInterface::hangarOperation()
 	for (auto it = planesInHangar.begin(); it != planesInHangar.end(); it++)
 	{
 		it->second--;
-		if (it->second == 0)
+		if (it->second <= 0)
 		{
-			//what happens when the plane completes it maintanance (it leaves and check if it will crash after
+			//what happens when the plane completes it maintanance (it leaves and check if it will crash after)
+			delete[] it->first; // dealocates heap memory for memory safety
 		}
 
 	}
@@ -72,10 +82,62 @@ void UserInterface::newAircraftArrivals()
 	t5.join();
 	t6.join();
 
-	for (int i = 0; i < 3; ++i) {
-		for (int j = 0; j < 2; ++j) {
-			cout << aircraftGenerationMatrix[i][j] << " ";
-		}
-		cout << endl;
+	// created 3 new planes that have just arrived at player's hangar
+	Plane* newArrivePlane1 = createPlane(aircraftGenerationMatrix[0][0]);
+	Plane* newArrivePlane2 = createPlane(aircraftGenerationMatrix[1][0]);
+	Plane* newArrivePlane3 = createPlane(aircraftGenerationMatrix[2][0]);
+	
+	// we are getting the issues, allowing the user to select the solution and then noting down how much money the user spends and putting the plane into our hangar
+	newArrivePlane1->getIssue(aircraftGenerationMatrix[0][1]);
+	newArrivePlane1->possibleSolutions(aircraftGenerationMatrix[0][1]);
+	moneySpent += newArrivePlane1->getCost();
+	planesInHangar[newArrivePlane1] = newArrivePlane1->getTime();
+	// something to handle hangar space taken up and logic if there is no hangar space remaining
+	// also some logic to handle if you turn a plane away (check if plane is safe)
+
+	newArrivePlane2->getIssue(aircraftGenerationMatrix[1][1]);
+	newArrivePlane2->possibleSolutions(aircraftGenerationMatrix[1][1]);
+	moneySpent += newArrivePlane2->getCost();
+	planesInHangar[newArrivePlane2] = newArrivePlane2->getTime();
+	// something to handle hangar space taken up and logic if there is no hangar space remaining
+	// also some logic to handle if you turn a plane away (check if plane is safe)
+
+	newArrivePlane3->getIssue(aircraftGenerationMatrix[2][1]);
+	newArrivePlane3->possibleSolutions(aircraftGenerationMatrix[2][1]);
+	moneySpent += newArrivePlane3->getCost();
+	planesInHangar[newArrivePlane3] = newArrivePlane3->getTime();
+	// something to handle hangar space taken up and logic if there is no hangar space remaining
+	// also some logic to handle if you turn a plane away (check if plane is safe)
+}
+
+Plane* UserInterface::createPlane(int planeid)
+{
+	switch (planeid)
+	{
+	case 0:
+		return new A220IssueandSolutions();
+		break;
+	case 1:
+		return new A320IssueandSolutions();
+		break;
+	case 2:
+		return new A330IssueandSolutions();
+		break;
+	case 3:
+		return new A350IssueandSolutions();
+		break;
+	case 4:
+		return new B737IssueandSolutions();
+		break;
+	case 5:
+		return new B767IssueandSolutions();
+		break;
+	case 6:
+		return new B777IssueandSolutions();
+		break;
+	case 7:
+		return new B787IssueandSolutions();
+		break;
+	 
 	}
 }
