@@ -20,6 +20,8 @@ int main()
 	user1.hangarOperation();
 	cout << user1 << endl;
 	user1.newAircraftArrivals();
+	user1.hangarOperation();
+	cout << user1 << endl;
 	
 	return 0;
 }
