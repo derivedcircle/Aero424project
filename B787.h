@@ -15,9 +15,9 @@ class B787IssueandSolutions : public Plane
 private:
 	int time;
 	int cost;
+	bool planeSafe;
 
 public:
-	bool planeSafe;
 
 	//user chooses number and based off of that, a problem is generated
 	void getIssue(int num) override;
@@ -30,6 +30,9 @@ public:
 
 	//get time to repair plane
 	int getTime() override;
+
+	//get status of plane safety
+	bool getPlaneSafe() override;
 };
 
 #endif // !B787_H

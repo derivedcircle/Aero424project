@@ -96,3 +96,8 @@ float B787IssueandSolutions::getCost() {
 int B787IssueandSolutions::getTime() {
 	return time;
 }
+
+//get status of plane safety
+bool B787IssueandSolutions::getPlaneSafe() {
+	return planeSafe;
+}

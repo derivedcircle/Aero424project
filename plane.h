@@ -10,7 +10,7 @@ public:
 	virtual void possibleSolutions(int number) = 0;
 	virtual float getCost() = 0;
 	virtual int getTime() = 0;
-	virtual ~Plane();
+	virtual bool getPlaneSafe() = 0;
 };
 
 #endif // !Plane_H
