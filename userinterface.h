@@ -23,7 +23,7 @@ class UserInterface
 	
 	
 public:
-	int days;
+	int days;//
 
 	bool hasPlaneCrashed;
 

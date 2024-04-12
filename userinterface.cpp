@@ -144,7 +144,7 @@ Plane* UserInterface::createPlane(int planeid)
 	}
 }
 
-
+// destructor added
 UserInterface::~UserInterface()
 {
 	for (auto it = planesInHangar.begin(); it != planesInHangar.end(); it++)

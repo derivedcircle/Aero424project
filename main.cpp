@@ -27,7 +27,7 @@ int main()
 		cout << user1 << endl;
 		user1.newAircraftArrivals();
 		user1.hangarOperation();
-		cout << user1 << endl;
+		cout << user1 << endl;//
 
 		// game over code
 		if (user1.days > HIGH_SCORE_GV)
