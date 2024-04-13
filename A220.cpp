@@ -67,9 +67,9 @@ void A220IssueandSolutions::possibleSolutions(int number) {
 	case 1:
 		//Issue: Door flew off during flight
 		std::cout << "How do you want to solve the issue?" << endl;
-		std::cout << "Press A to do nothing($0)." << endl;
-		std::cout << "Press B to replace the door and paint over any problematic bolts($100)." << endl;
-		std::cout << "Press C to replace the door as well as problematic bolts in other areas of the plane($200)" << endl;
+		std::cout << "Press A to do nothing($0/0 days)." << endl;
+		std::cout << "Press B to replace the door and paint over any problematic bolts($100/2 days)." << endl;
+		std::cout << "Press C to replace the door as well as problematic bolts in other areas of the plane($200/4 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
