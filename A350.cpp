@@ -68,8 +68,8 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 		//Issue: plane scraped ground upon takeoff
 		std::cout << "How do you want to solve the issue? " << endl;
 		std::cout << "Press A to do a general check for damage and replace damaged parts($500/7 days)." << endl;
-		std::cout << "Press B to do nothing($0 / 0 days)." << endl;
-		std::cout << "Press C to drill a hole in the fuselage($250 / 2 days)" << endl;
+		std::cout << "Press B to do nothing($0/0 days)." << endl;
+		std::cout << "Press C to drill a hole in the fuselage($250/2 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;

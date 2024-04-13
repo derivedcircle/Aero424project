@@ -22,7 +22,7 @@ void B777IssueandSolutions::getIssue(int num) {
 		std::cout << "The pilot of the B777 plane (size 700) reports that the window is dirty and he can't see" << endl;
 		break;
 	case 1:
-		std::cout << "The pilot of the B777 plane (size 700) reports that the The septic tank is leaking" << endl;
+		std::cout << "The pilot of the B777 plane (size 700) reports that the septic tank is leaking" << endl;
 		break;
 	}
 }
