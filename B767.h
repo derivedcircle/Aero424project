@@ -13,9 +13,9 @@
 class B767IssueandSolutions : public Plane
 {
 private:
-	int time;
-	int cost;
-	bool planeSafe;
+	int time; //keep track of time to fix plane
+	int cost; //keep track of cost to fix plane
+	bool planeSafe; //keep track of whether plane has crashed or not
 
 public:
 	//user chooses number and based off of that, a problem is generated

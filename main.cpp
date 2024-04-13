@@ -34,7 +34,7 @@ int main()
 		if (user1.days > HIGH_SCORE_GV)
 		{
 			HIGH_SCORE_GV = user1.days;
-			cout << "You have just acheved the high score! Congradulations!" << endl;
+			cout << "You have just acheved the high score! Congratulations!" << endl;
 		}
 		cout << "Here are the names of those who have played before you" << endl;
 		for (auto& names : user1.userHistory)

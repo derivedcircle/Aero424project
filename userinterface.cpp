@@ -99,14 +99,6 @@ void UserInterface::newAircraftArrivals()
 	t6.join();
 	// randomizer fill in done with mulitthreading for speed
 
-	// debug codes
-	for (int i = 0; i < 3; ++i) {
-		for (int j = 0; j < 2; ++j) {
-			cout << aircraftGenerationMatrix[i][j] << " ";
-		}
-		cout << endl;
-	}
-
 	// created 3 new planes that have just arrived at player's hangar
 	Plane* newArrivePlane1 = createPlane(aircraftGenerationMatrix[0][0]);
 	Plane* newArrivePlane2 = createPlane(aircraftGenerationMatrix[1][0]);
@@ -202,6 +194,7 @@ void UserInterface::newAircraftArrivals()
 	}
 }
 
+//create plane
 Plane* UserInterface::createPlane(int planeid)
 {
 	switch (planeid)

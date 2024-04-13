@@ -47,6 +47,7 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 			std::cout << "Please enter either A, B, or C" << endl;
 			std::cin >> options;
 		}
+		//use switch to keep track of time and money spent, as well as whether plane has been destroyed
 		switch (options) {
 		case 'A':
 			time = 7;
@@ -76,6 +77,7 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 			std::cout << "Please enter either A, B, or C" << endl;
 			std::cin >> options;
 		}
+		//use switch to keep track of time and money spent, as well as whether plane has been destroyed
 		switch (options) {
 		case 'A':
 			time = 7;
@@ -112,6 +114,7 @@ bool A350IssueandSolutions::getPlaneSafe() {
 	return planeSafe;
 }
 
+//get size of plane
 double A350IssueandSolutions::getSize() {
 	return 800.0;
 }
