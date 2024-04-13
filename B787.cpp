@@ -45,6 +45,7 @@ void B787IssueandSolutions::possibleSolutions(int number) {
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
+			std::cin >> options;
 		}
 		switch (options) {
 		case 'A':
@@ -73,6 +74,7 @@ void B787IssueandSolutions::possibleSolutions(int number) {
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
+			std::cin >> options;
 		}
 		switch (options) {
 		case 'A':
