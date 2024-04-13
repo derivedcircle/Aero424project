@@ -22,24 +22,25 @@ int main()
 	do// loop to play the game again
 	{
 		UserInterface user1(initFun());
-		cout << user1 << endl;
-		user1.hangarOperation();
-		cout << user1 << endl;
-		user1.newAircraftArrivals();
-		user1.hangarOperation();
-		cout << user1 << endl;//
-
+		while (!user1.hasPlaneCrashed)
+		{
+			cout << user1 << endl;
+			user1.newAircraftArrivals();
+			user1.hangarOperation();
+		}
 		// game over code
+
+		cout << "A plane crashed and as a result, you were fired" << endl;
 		if (user1.days > HIGH_SCORE_GV)
 		{
 			HIGH_SCORE_GV = user1.days;
 			cout << "You have just acheved the high score! Congradulations!" << endl;
 		}
 		cout << "Here are the names of those who have played before you" << endl;
-		/*for (auto& names : UserInterface::userHistory)
+		for (auto& names : user1.userHistory)
 		{
 			cout << names << endl;
-		}*/
+		}
 		string playGameAgainCheck;
 		
 		// the regex checks for yes/no or y/n with any capitalization
