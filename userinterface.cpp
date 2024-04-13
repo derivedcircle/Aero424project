@@ -48,8 +48,9 @@ void UserInterface::hangarOperation()
 	days++;// incriments the day
 	
 	for_each(planesInHangar.begin(), planesInHangar.end(), [&](pair<Plane*, int> it) {
-		it.second = it.second - 1; // decrements the number of days remaining on the plane's repair
-			if (it.second <= 0) // if there are no days remaining for the plane's maintanance, this triggers
+		planesInHangar[it.first]--;
+		//it.second = it.second - 1; // decrements the number of days remaining on the plane's repair
+			if (planesInHangar[it.first] <= 0) // if there are no days remaining for the plane's maintanance, this triggers
 			{
 				hangarSpace += it.first->getSize();// re adds the space previously taken up by the plane that has now left
 				if (!(it.first->getPlaneSafe())) // checking to see if turning the plane away resulted in a plane crash and if so triggering the plane crashed 
