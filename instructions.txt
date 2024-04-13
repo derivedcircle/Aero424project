@@ -1,0 +1,27 @@
+INSTRUCTIONS TO PLAY:
+
+You are the manager at an aircraft maintanance hanger.
+Your job is to fix as many planes as you can and last as long as you can.
+If any planes crash, you will loose the game.
+
+Every day, 3 planes will arrive and their pilots will tell you what the issue
+is with their plane. For each plane, you will have to decide what the best 
+course of action is for the plane from 3 choices, including one option to simply
+let the plane go.
+
+Each option will include the cost to perform the maintanance and how many days
+it will take to complete (You currently do NOT have the CAPITALISM DLC so you 
+unfortunatly have unlimited money. If you would like to get access to capitalism,
+please subsribe to the battle pass for 2000 dollars a month)
+
+Multiple options can be correct and you will not find out if you made a wrong choice
+until the plane leaves your hangar.
+
+After you are done handling the new arrivals, you will see a display showing the current
+day, how much money you have spent, how much hangar space is taken up, and all of the aircrafts
+displayed by their ID and how many days they have left of maintanance.
+
+Remember, you will not be able to take in any planes if there is no space in your hanger 
+and if any planes crash, you are fired. You may play this game as many times as you like.
+
+WE ARE COUNTING ON YOU... GOOD LUCK <3
