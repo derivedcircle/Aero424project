@@ -13,7 +13,7 @@ class UserInterface
 {
 	
 	string username;
-	const double MAX_HANGAR_SPACE = 10000.0; // Can be adjusted - use in setting difficulty (may also be removed and added in plane class) (if so remove)
+	const double MAX_HANGAR_SPACE = 4000.0; // Can be adjusted - use in setting difficulty (may also be removed and added in plane class) (if so remove)
 	double hangarSpace;
 	float moneySpent;
 	
