@@ -43,6 +43,9 @@ int main()
 		}
 		string playGameAgainCheck;
 		
+		//clearing input buffer to avoid skipping getline
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		
 		// the regex checks for yes/no or y/n with any capitalization
 		while (!regex_match(playGameAgainCheck, regex("^[y|Y][e|E][s|S]$|^[n|N][o|O]$|^[n|N]$|^[y|Y]$")))
 		{

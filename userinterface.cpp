@@ -194,7 +194,7 @@ void UserInterface::newAircraftArrivals()
 	}
 }
 
-//create plane
+//creates a plane given a number from 0 to 7
 Plane* UserInterface::createPlane(int planeid)
 {
 	switch (planeid)
