@@ -19,10 +19,10 @@ void B737IssueandSolutions::getIssue(int num) {
 	}
 	switch (num) {
 	case 0:
-		std::cout << "The navigation system failed" << endl;
+		std::cout << "The pilot of the B737 plane (size 400) has reported that the navigation system failed" << endl;
 		break;
 	case 1:
-		std::cout << "Left fuel tank has a leak" << endl;
+		std::cout << "The pilot of the B737 plane (size 400) has reported that the left fuel tank has a leak" << endl;
 		break;
 	}
 }
@@ -38,7 +38,10 @@ void B737IssueandSolutions::possibleSolutions(int number) {
 	switch (number) {
 		//Issue: Navigation system failed
 	case 0:
-		std::cout << "How do you want to solve this issue? Press A to do nothing ($0). 'What's our vector, Victor?' ($0).Press C to replace the navigation system ($500)" << endl;
+		std::cout << "How do you want to solve this issue? " << endl;
+		std::cout << "Press A to do nothing($0/0 days)" << endl;
+		std::cout << "Press B for 'What's our vector, Victor?'($0/1 day)" << endl;
+		std::cout << "Press C to replace the navigation system($500/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -47,7 +50,7 @@ void B737IssueandSolutions::possibleSolutions(int number) {
 		case 'A':
 			time = 0;
 			cost = 0;
-			planeSafe = false;
+			planeSafe = true;
 			break;
 		case 'B':
 			time = 1;
@@ -63,7 +66,10 @@ void B737IssueandSolutions::possibleSolutions(int number) {
 		break;
 	case 1:
 		//Issue: Left fuel tank leak
-		std::cout << "How do you want to solve the issue? Press A to run a leak test on the left wing ($50). Press B to do nothing ($0). Press C to replace the left aileron ($500)" << endl;
+		std::cout << "How do you want to solve the issue? " << endl;
+		std::cout << "Press A to run a leak test on the left wing($50/1 day)." << endl;
+		std::cout << "Press B to do nothing($0/0 days)." << endl;
+		std::cout << "Press C to replace the left aileron($500/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;

@@ -19,10 +19,10 @@ void A320IssueandSolutions::getIssue(int num) {
 	}
 	switch (num) {
 	case 0:
-		std::cout << "A pigeon flew into one of the engines" << endl;
+		std::cout << "The pilot of the A220 plane (size 500) has reported that a pigeon flew into one of the engines" << endl;
 		break;
 	case 1:
-		std::cout << "One of the instruments isn't working" << endl;
+		std::cout << "The pilot of the A220 plane (size 500) has reported that one of the instruments isn't working" << endl;
 		break;
 	}
 }
@@ -38,7 +38,10 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 	switch (number) {
 	//Issue: Pigeons flew into engine
 	case 0:
-		std::cout << "How do you want to solve this issue? Press A to replace the engine ($500). Press B to implement a pigeon shield ($100). Press C to do nothing ($0)." << endl;
+		std::cout << "How do you want to solve this issue?" << endl;
+		std::cout << "Press A to replace the engine($500/7 days)." << endl;
+		std::cout << "Press B to implement a pigeon shield($100/3 days)." << endl;
+		std::cout << "Press C to do nothing($0/0 days)." << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -63,7 +66,10 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 		break;
 	case 1:
 		//Issue: Instrument not working
-		std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to tell passengers to turn on airplane mood ($0). Press C to replace all of the instruments ($300)" << endl;
+		std::cout << "How do you want to solve the issue?" << endl;
+		std::cout << "Press A to do nothing($0/0 days)." << endl;
+		std::cout << "Press B to tell passengers to turn on airplane mode($0/1 day)." << endl;
+		std::cout << "Press C to replace all of the instruments($300/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -72,7 +78,7 @@ void A320IssueandSolutions::possibleSolutions(int number) {
 		case 'A':
 			time = 0;
 			cost = 0;
-			planeSafe = false;
+			planeSafe = true;
 			break;
 		case 'B':
 			time = 1;

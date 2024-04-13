@@ -19,10 +19,10 @@ void B777IssueandSolutions::getIssue(int num) {
 	}
 	switch (num) {
 	case 0:
-		std::cout << "The window is dirty and the pilots can't see" << endl;
+		std::cout << "The pilot of the B777 plane (size 700) reports that the window is dirty and he can't see" << endl;
 		break;
 	case 1:
-		std::cout << "The septic tank is leaking" << endl;
+		std::cout << "The pilot of the B777 plane (size 700) reports that the The septic tank is leaking" << endl;
 		break;
 	}
 }
@@ -38,7 +38,10 @@ void B777IssueandSolutions::possibleSolutions(int number) {
 	switch (number) {
 	//Issue: Window dirty
 	case 0:
-		std::cout << "How do you want to solve this issue? Press A to tell the pilots to get prescription glasses ($0). Clean the window ($30).Press C to replace the window ($300)" << endl;
+		std::cout << "How do you want to solve this issue?" << endl;
+		std::cout << "Press A to tell the pilots to get prescription glasses($0/0 day)." << endl;
+		std::cout << "Press B to clean the window($30/1 day)." << endl;
+		std::cout << "Press C to replace the window($300/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -63,7 +66,10 @@ void B777IssueandSolutions::possibleSolutions(int number) {
 		break;
 	case 1:
 		//Issue: Septic tank leak
-		std::cout << "How do you want to solve the issue? Press A to wish the passengers good luck ($0). Press B to replace the fuel tank ($400). Press C to replace the septic tank ($200)" << endl;
+		std::cout << "How do you want to solve the issue? " << endl;
+		std::cout << "Press A to wish the passengers good luck($0/0 days)." << endl;
+		std::cout << "Press B to replace the fuel tank($400/7 days)." << endl;
+		std::cout << "Press C to replace the septic tank($200/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
