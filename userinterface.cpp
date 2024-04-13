@@ -46,7 +46,7 @@ ostream& operator<<(ostream& os, const UserInterface& obj)
 void UserInterface::hangarOperation()
 {
 	days++;// incriments the day
-	
+	vector<Plane*> holdLeavingPlanes;
 	for_each(planesInHangar.begin(), planesInHangar.end(), [&](pair<Plane*, int> it) {
 		planesInHangar[it.first]--;
 		//it.second = it.second - 1; // decrements the number of days remaining on the plane's repair
@@ -57,11 +57,17 @@ void UserInterface::hangarOperation()
 				{//flag to end the game
 					hasPlaneCrashed = true;
 				}
-				Plane* tempStorage = (it.first);// temporarily stores the plane pointer 
-				planesInHangar.erase(it.first);// removes the plane's entry from the hangar
-				delete[] tempStorage; // dealocates heap memory for memory safety
+				holdLeavingPlanes.push_back(it.first);
+				
 			}
 		});
+
+	for (auto& plns : holdLeavingPlanes)
+	{
+		Plane* tempStorage = (plns);// temporarily stores the plane pointer 
+		planesInHangar.erase(plns);// removes the plane's entry from the hangar
+		delete[] tempStorage; // dealocates heap memory for memory safety
+	}
 }
 
 // this function handles new planes arriving to the hanger every day
