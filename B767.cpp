@@ -19,10 +19,10 @@ void B767IssueandSolutions::getIssue(int num) {
 	}
 	switch (num) {
 	case 0:
-		std::cout << "Just discovered a trap door" << endl;
+		std::cout << "The pilot of the B767 plane (size 550) just discovered a trap door near a passenger seat" << endl;
 		break;
 	case 1:
-		std::cout << "One of the windows cracked" << endl;
+		std::cout << "The pilot of the B767 plane (size 550) reports that one of the windows cracked" << endl;
 		break;
 	}
 }
@@ -38,7 +38,10 @@ void B767IssueandSolutions::possibleSolutions(int number) {
 	switch (number) {
 	//Issue: Trap door
 	case 0:
-		std::cout << "How do you want to solve this issue? Press A to do nothing ($0). Give the passengers a parachute and wish them luck ($100).Press C to inspect and replace ($1000)" << endl;
+		std::cout << "How do you want to solve this issue?" << endl;
+		std::cout << "Press A to do nothing($0/0 days)." << endl;
+		std::cout << "Press B to give the passengers a parachute and wish them luck($100/1 day)." << endl;
+		std::cout << "Press C to inspect and replace($1000/30 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -63,7 +66,10 @@ void B767IssueandSolutions::possibleSolutions(int number) {
 		break;
 	case 1:
 		//Issue: Window crack
-		std::cout << "How do you want to solve the issue? Press A to duct tape the window ($5). Press B to do nothing ($0). Press C to replace the window ($100)" << endl;
+		std::cout << "How do you want to solve the issue?" << endl;
+		std::cout << "Press A to duct tape the window($5/1 day)." << endl;
+		std::cout << "Press B to do nothing($0/0 days)." << endl;
+		std::cout << "Press C to replace the window($100/3 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;

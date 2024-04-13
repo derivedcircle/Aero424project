@@ -19,10 +19,10 @@ void B787IssueandSolutions::getIssue(int num) {
 	}
 	switch (num) {
 	case 0:
-		std::cout << "Right fuel tank leak" << endl;
+		std::cout << "The pilot of the B787 plane (size 650) reports that the right fuel tank is leaking" << endl;
 		break;
 	case 1:
-		std::cout << "The wing cracked" << endl;
+		std::cout << "The pilot of the B787 plane (size 650) reports that the wing cracked" << endl;
 		break;
 	}
 }
@@ -38,7 +38,10 @@ void B787IssueandSolutions::possibleSolutions(int number) {
 	switch (number) {
 	//Issue: Right fuel tank leak
 	case 0:
-		std::cout << "How do you want to solve this issue? Press A to run a leak test on the right wing ($50). Press B to do nothing ($0). Press C to replace the right aileron ($500)" << endl;
+		std::cout << "How do you want to solve this issue?" << endl;
+		std::cout << "Press A to run a leak test on the right wing($50/1 day)." << endl;
+		std::cout << "Press B to do nothing($0/0 day)." << endl;
+		std::cout << "Press C to replace the right aileron($500/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -57,13 +60,16 @@ void B787IssueandSolutions::possibleSolutions(int number) {
 		case 'C':
 			time = 7;
 			cost = 500;
-			planeSafe = true;
+			planeSafe = false;
 			break;
 		}
 		break;
 	case 1:
 		//Issue: Wing cracked
-		std::cout << "How do you want to solve the issue? Press A to do nothing ($0). Press B to replace the fuel tank ($400). Press C to fix the wing ($400)" << endl;
+		std::cout << "How do you want to solve the issue? " << endl;
+		std::cout << "Press A to do nothing($0/0 days)." << endl;
+		std::cout << "Press B to replace the fuel tank($400/7 days)." << endl;
+		std::cout << "Press C to fix the wing($400/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;

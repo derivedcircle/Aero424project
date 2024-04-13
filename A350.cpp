@@ -19,10 +19,10 @@ void A350IssueandSolutions::getIssue(int num) {
 	}
 	switch (num) {
 	case 0:
-		std::cout << "The tire fell off during flight" << endl;
+		std::cout << "The pilot of the A350 plane (size 800) has reported that the tire fell off during flight" << endl;
 		break;
 	case 1:
-		std::cout << "There is no fuel" << endl;
+		std::cout << "The pilot of the A350 plane (size 800) has reported that the plane scraped the ground upon takeoff" << endl;
 		break;
 	}
 }
@@ -36,9 +36,12 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 		std::cin >> number;
 	}
 	switch (number) {
-	//Issue: Engine filled with diesel
+	//Issue: tire fell off
 	case 0:
-		std::cout << "How do you want to solve this issue? Press A to replace the wheel and bolts ($500). Press B to do nothing ($0). Press C to replace the door ($400)" << endl;
+		std::cout << "How do you want to solve this issue? " << endl;
+		std::cout << "Press A to replace the wheel and bolts($500/7 days)." << endl;
+		std::cout << "Press B to do nothing($0/0 days)." << endl;
+		std::cout << "Press C to replace the door($400/7 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
@@ -62,27 +65,30 @@ void A350IssueandSolutions::possibleSolutions(int number) {
 		}
 		break;
 	case 1:
-		//Issue: No fuel
-		std::cout << "How do you want to solve the issue? Press A to refuel ($50). Press B to do nothing ($0). Press C to replace the whole engine ($500)" << endl;
+		//Issue: plane scraped ground upon takeoff
+		std::cout << "How do you want to solve the issue? " << endl;
+		std::cout << "Press A to do a general check for damage and replace damaged parts($500/7 days)." << endl;
+		std::cout << "Press B to do nothing($0 / 0 days)." << endl;
+		std::cout << "Press C to drill a hole in the fuselage($250 / 2 days)" << endl;
 		std::cin >> options;
 		while (options != 'A' && options != 'B' && options != 'C') {
 			std::cout << "Please enter either A, B, or C" << endl;
 		}
 		switch (options) {
 		case 'A':
-			time = 1;
-			cost = 50;
+			time = 7;
+			cost = 500;
 			planeSafe = true;
 			break;
 		case 'B':
 			time = 0;
 			cost = 0;
-			planeSafe = false;
+			planeSafe = true;
 			break;
 		case 'C':
-			time = 7;
-			cost = 500;
-			planeSafe = true;
+			time = 2;
+			cost = 250;
+			planeSafe = false;
 			break;
 		}
 		break;
